@@ -8,8 +8,8 @@ mongoose
 .connect(process.env.MONGO_URI, {
   dbName: 'backendapi',
 })
-.then(() => {
-  console.log('Database Connected')
+.then((c) => {
+  console.log(`Database Connected with on ${c.connection.host}`)
 })
 .catch((err) => {
   console.log(err)
